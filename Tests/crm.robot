@@ -1,6 +1,12 @@
 *** Settings ***
 Documentation        This is some basic info about the whole suite
 Library              SeleniumLibrary
+Resource             ../Resources/Page Obects/HomePage.robot
+Resource             ../Resources/Page Obects/LoginPage.robot
+Resource             ../Resources/Page Obects/MainPage.robot  
+Resource             ../Resources/common.robot
+Test Setup           Begin Web Test
+Task Teardown        End Web Test
 
 
 *** Variables ***
@@ -8,41 +14,23 @@ Library              SeleniumLibrary
 
 
 *** Test Cases ***
-Should be able to add new customer
-    [Documentation]        This is some basic info about the test
-    [Tags]                 1006    Smoke    Contacts
-    Set Selenium Speed     .2s
-    Set Selenium Timeout   5s
+User should see a main page
+    [Documentation]        This is some basic info about the test 1
+    [Tags]                 1006    Smoke    Contacts 
+    MainPage.Open Log In Page
 
-    Log                    Starting the test case!
-    Open Browser           https://automationplayground.com/crm/    chrome
-    Page Should Contain    Customers Are Priority One!
+User can log in
+    [Documentation]        This is some basic info about the test 2
+    [Tags]                 1007    Smoke    Contacts 
+    MainPage.Open Log In Page
+    LoginPage.Log In
 
-    Click Link             id=SignIn
-    Page Should Contain    Login
-    
-    Input Text             id=email-id        admin@fakeemail.com
-    Input Text             id=password        qwerty123
-    Click Button           Submit
-    Page Should Contain    Our Happy Customers
-
-    Click Link             id=new-customer
-    Page Should Contain    Add Customer
-    
-    Input Text             id=EmailAddress    max.mustermann@fakemail.com
-    Input Text             id=FirstName       Max
-    Input Text             id=LastName        Mustermann
-    Input Text             id=City            Berlin
-    Select From List By Value    id=StateOrRegion    TX
-    Select Radio Button    gender        male
-    Select Checkbox        promos-name
-    Click Button           Submit
-
-    Page Should Contain    Success! New customer added.
-
-    Sleep                  3s
-    Close Browser
-
+User can add a new User
+    [Documentation]        This is some basic info about the test 3
+    [Tags]                 1008    Smoke    Contacts 
+    MainPage.Open Log In Page
+    LoginPage.Log In
+    HomePage.Add New User
 
 *** Keywords ***
 
