@@ -5,7 +5,10 @@ Library    SeleniumLibrary
 
 
 *** Keywords ***
-Open Log In Page
+Click Sign In Link
     Click Link             id=SignIn
-    Page Should Contain    Login
+
+Click Sign Out Link
+    Click Link    Sign Out
+
 
