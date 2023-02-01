@@ -1,5 +1,6 @@
 *** Settings ***
 Library        SeleniumLibrary
+Resource   ../Tests/crm.robot
 
 *** Variables ***
 
@@ -10,7 +11,7 @@ Begin Web Test
     Set Selenium Timeout   5s
 
     Log                    Starting the test case!
-    Open Browser           https://automationplayground.com/crm/    chrome
+    Open Browser           https://automationplayground.com/crm/  chrome
     Page Should Contain    Customers Are Priority One!
 
 

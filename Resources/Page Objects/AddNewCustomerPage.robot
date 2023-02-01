@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource    ../../Tests/crm.robot
 
 
 *** Variables ***
@@ -11,7 +12,7 @@ Verify Add New Customer Page Loaded
 
 
 Add New Customer
-    Input Text             id=EmailAddress    max.mustermann@fakemail.com
+    Input Text             id=EmailAddress    ${EMAIL}
     Input Text             id=FirstName       Max
     Input Text             id=LastName        Mustermann
     Input Text             id=City            Berlin
