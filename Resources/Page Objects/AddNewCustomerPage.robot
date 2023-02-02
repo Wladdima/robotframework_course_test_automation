@@ -13,8 +13,8 @@ Verify Add New Customer Page Loaded
 
 Add New Customer
     Input Text             id=EmailAddress    ${EMAIL}
-    Input Text             id=FirstName       Max
-    Input Text             id=LastName        Mustermann
+    Input Text             id=FirstName       ${FIRSTNAME}
+    Input Text             id=LastName        ${LASTNAME}
     Input Text             id=City            Berlin
     Select From List By Value    id=StateOrRegion    TX
     Select Radio Button    gender        male

@@ -7,7 +7,7 @@ Resource   ../../Tests/crm.robot
 
 *** Keywords ***
 Load
-    Go To        https://automationplayground.com/crm/                 
+    Go To        ${LANDING_PAGE_URL}                 
 
 Verify Landing Page Loaded
     Wait Until Page Contains    Customers Are Priority One!

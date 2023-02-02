@@ -7,9 +7,11 @@ Task Teardown        End Web Test
 
 
 *** Variables ***
-#${LANDING_PAGE_URL} =  https://automationplayground.com/crm/
-#${BROWSER} =  chrome
+${LANDING_PAGE_URL} =  https://automationplayground.com/crm/
+${BROWSER} =  chrome
 ${EMAIL} =  max.mustermann@fakemail.com
+${FIRSTNAME} =  Daniel
+${LASTNAME} =  ALTROCK
 
 
 *** Test Cases ***
