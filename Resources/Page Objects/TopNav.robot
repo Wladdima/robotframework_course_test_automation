@@ -2,13 +2,13 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-
+${sign_in_link} =  id=SignIn
+${sign_out_link} =  Sign Out
 
 *** Keywords ***
 Click Sign In Link
-    Click Link             id=SignIn
+    Click Link             ${sign_in_link}
 
 Click Sign Out Link
-    Click Link    Sign Out
-
+    Click Link        ${sign_out_link}
 

@@ -22,12 +22,10 @@ Sign In
 Add New Customer
     HomePage.Click New Customer Button
     AddNewCustomerPage.Verify Add New Customer Page Loaded
-    AddNewCustomerPage.Add New Customer
+    AddNewCustomerPage.Add New Customer    ${new_user_email}    ${first_name}    ${last_name}    ${city}    ${state_or_region}    ${gender}
     HomePage.Verify New Customer Added
 
 Sign Out
     TopNav.Click Sign Out Link
     SignOutPage.Verify Sign Out Page Loaded
-    
-
     
