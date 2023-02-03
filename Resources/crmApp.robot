@@ -11,15 +11,19 @@ Resource  ../Resources/Page Objects/SignOutPage.robot
     
 
 *** Keywords ***
-Sign In
+Go To Landing Page
     LandingPage.Load
     LandingPage.Verify Landing Page Loaded
+
+Sign In
+    [Arguments]    ${LOGIN_EMAIL}    ${LOGIN_PASSWORD}
     TopNav.Click Sign In Link
     SignInPage.Verify Sign In Page Loaded
-    SignInPage.Sign In
+    SignInPage.Sign In    ${LOGIN_EMAIL}    ${LOGIN_PASSWORD}
     HomePage.Verify Home Page Loaded
 
 Add New Customer
+    [Arguments]    ${new_user_email}    ${first_name}    ${last_name}    ${city}    ${state_or_region}    ${gender}
     HomePage.Click New Customer Button
     AddNewCustomerPage.Verify Add New Customer Page Loaded
     AddNewCustomerPage.Add New Customer    ${new_user_email}    ${first_name}    ${last_name}    ${city}    ${state_or_region}    ${gender}

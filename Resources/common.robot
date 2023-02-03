@@ -16,4 +16,4 @@ Begin Web Test
 
 End Web Test
     Sleep    3s
-    Close Browser
+    Close All Browsers
