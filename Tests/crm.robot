@@ -3,7 +3,7 @@ Documentation        This is some basic info about the whole suite
 Resource             ../Resources/common.robot
 Resource             ../Resources/crmApp.robot
 Test Setup           Begin Web Test
-Task Teardown        End Web Test
+Test Teardown        End Web Test
 
 
 *** Variables ***
@@ -45,5 +45,4 @@ User can sign Outs
     crmApp.Sign In    ${LOGIN_EMAIL}    ${LOGIN_PASSWORD}
     crmApp.Sign Out
 
-*** Keywords ***
 
