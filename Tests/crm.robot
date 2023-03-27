@@ -17,6 +17,8 @@ ${last_name} =  Popov
 ${city} =  Dallas
 ${state_or_region} =  CA
 ${gender} =  male
+${REMOTE_URL} =  https://oauth-wladdima.wladimir-8afe7:9b413aa6-9a20-4f20-88b0-c5a269704bb0@ondemand.eu-central-1.saucelabs.com:443/wd/hub
+${DESIRED_CAPABILITIES} =  name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:109.0
 
 
 *** Test Cases ***

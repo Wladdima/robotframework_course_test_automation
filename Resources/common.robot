@@ -1,10 +1,10 @@
 *** Settings ***
 Library        SeleniumLibrary
 Resource   ../Tests/crm.robot
+Library    Saucelabs.py
 
 *** Variables ***
-${REMOTE_URL} =  https://oauth-wladdima.wladimir-8afe7:9b413aa6-9a20-4f20-88b0-c5a269704bb0@ondemand.eu-central-1.saucelabs.com:443/wd/hub
-${DESIRED_CAPABILITIES} =  name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:109.0
+
 
 *** Keywords ***
 Begin Web Test
@@ -19,4 +19,8 @@ Begin Web Test
 
 End Web Test
     Sleep    3s
+#    Run Keyword If    '${REMOTE_URL}' != ''    
+#    ...    report_sauce_status    
+#    ...    ${SUITE_NAME}:    ${TEST_NAME}
+#    ...    ${TEST_STATUS}    ${REMOTE_URL}
     Close All Browsers
